@@ -12,8 +12,8 @@ EC.presence_of_element_located((By.ID, "myDynamicElement"))
 def testing():
     pytest.driver = webdriver.Chrome(r'e:C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
     pytest.driver.get('http://petfriends1.herokuapp.com/login')
-    pytest.driver.find_element_by_id('email').send_keys('dubanova_va2@mail..ru')
-    pytest.driver.find_element_by_id('pass').send_keys('123456789')
+    pytest.driver.find_element_by_id('email').send_keys('sanches1305@inbox..ru')
+    pytest.driver.find_element_by_id('pass').send_keys('metax1305')
     pytest.driver.find_element_by_css_selector('button[type="submit"]').click()
 
     assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
@@ -23,8 +23,8 @@ def testing():
     pytest.driver.quit()
 
 def test_show_my_pets():
-   pytest.driver.find_element_by_id('email').send_keys('dubanova_va2@mail.ru')
-   pytest.driver.find_element_by_id('pass').send_keys('123456789')
+   pytest.driver.find_element_by_id('email').send_keys('sanches1305@inbox.ru')
+   pytest.driver.find_element_by_id('pass').send_keys('metax1305')
    pytest.driver.find_element_by_css_selector('button[type="submit"]').click()
    assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
 images = pytest.driver.find_elements_by_css_selector('.card-deck .card-img-top')
